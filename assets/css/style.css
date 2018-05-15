@@ -17,11 +17,18 @@
 *{
     font-family: 'PT Sans Narrow', sans-serif;
     font-family: 'PT Sans', sans-serif;
+    
 }
 
 
 body{
-    background-color:var(--lightBlue);
+    /* background-image: url('../images/nighttime.jpg');
+    background-attachment: fixed;*/
+    background-image: url('../images/nighttime.jpg');
+    background-size: 100vw;
+    background-position: cover, contain;
+    background-position-y:-200px; 
+    background-color:rgb(208, 238, 240);
 }
 h1{
     font-size: 30px;
@@ -29,16 +36,15 @@ h1{
 }
 header{
     height: 15vh;
+    background-color: var(--deepBlue);
     box-shadow: 3px 0px 8px black;
 }
-
 .name{
     position: relative;
     margin-left: 7.5%;
     margin-left: 7.5vw;
     width: 30%;
     width: 30vw;
-    height: 11.5vh;
     background-color: var(--deepBlue);
     color: var(--lightBlue);
     padding: 10px;
@@ -47,7 +53,9 @@ header{
 .name:hover{
     
 }
+nav{
 
+}
 nav .links{
     position: absolute;
     top:18px;
@@ -65,6 +73,18 @@ nav .links li{
 nav .links li:hover{
     text-shadow: 3px 3px 7px var(--shadow);
 }
+.link li a:link{
+    text-decoration: none;
+}
+p{
+    position: relative;
+    width: 80%;
+    width: 60vw;
+    margin-left: 10%;
+    margin-left: 10vw;
+    padding: 20px;
+    font-size: 1.7vw;
+}
 .main-content{
     position: relative;
     margin-left: 7.5%;
@@ -81,15 +101,7 @@ nav .links li:hover{
     font-size: 2em;
     font-size: 2.5vw;
     padding: 20px;
-}
-p{
-    position: relative;
-    width: 80%;
-    width: 60vw;
-    margin-left: 10%;
-    margin-left: 10vw;
-    padding: 20px;
-    font-size: 1.7vw;
+    margin-top: 10px;
 }
 p img{
     float: left;
@@ -101,10 +113,21 @@ footer{
     text-align: center;
     font-size: 2em;
     font-size: 2vw;
-    height: 100px;
+    height: 80px;
     background-color: rgba(49, 50, 39, 0.4);
     border-top: 5px solid rgb(22, 22, 87)
 }
 footer h3{
     margin-top: 25px;
+}
+/**
+*   Styles for Contact Page
+**/
+#contact{
+    text-align: center;
+    padding: 5px;
+    
+}
+#contact input{
+    padding-right: 10px;
 }
