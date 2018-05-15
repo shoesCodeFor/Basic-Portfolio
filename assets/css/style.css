@@ -1,0 +1,110 @@
+/**
+*   Basic CSS styling for Homework 1 - Portfolio
+*   Schuyler Ankele
+*   University of Denver Bootcamp 2018
+**/
+
+/*  Global CSS Variables */
+:root{
+    --lightBlue: rgb(208, 238, 240);
+    --bone:rgb(254, 250, 227);
+    --deepBlue: #153535;
+    --shadow:rgba(239, 242, 208, 0.4);
+}
+
+
+/*  Global Fonts */
+*{
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-family: 'PT Sans', sans-serif;
+}
+
+
+body{
+    background-color:var(--lightBlue);
+}
+h1{
+    font-size: 30px;
+    font-size: 4vw;
+}
+header{
+    height: 15vh;
+    box-shadow: 3px 0px 8px black;
+}
+
+.name{
+    position: relative;
+    margin-left: 7.5%;
+    margin-left: 7.5vw;
+    width: 30%;
+    width: 30vw;
+    height: 11.5vh;
+    background-color: var(--deepBlue);
+    color: var(--lightBlue);
+    padding: 10px;
+    text-align: center;
+}
+.name:hover{
+    
+}
+
+nav .links{
+    position: absolute;
+    top:18px;
+    right: 12.5%;
+    right: 12.5vw;
+}
+nav .links li{
+    display: inline;
+    margin-top: 2vh;
+    padding: 10px;
+    font-size: 1em;
+    font-size: 2vw;
+    transition: all .2s;
+}
+nav .links li:hover{
+    text-shadow: 3px 3px 7px var(--shadow);
+}
+.main-content{
+    position: relative;
+    margin-left: 7.5%;
+    margin-left: 7.5vw;
+    width: 85%;
+    width: 85vw;
+    background-color: rgba(255,255,255,0.6);
+    
+}
+.main-content h2{
+    width:30%;
+    width:30vw;
+    text-align: center;
+    font-size: 2em;
+    font-size: 2.5vw;
+    padding: 20px;
+}
+p{
+    position: relative;
+    width: 80%;
+    width: 60vw;
+    margin-left: 10%;
+    margin-left: 10vw;
+    padding: 20px;
+    font-size: 1.7vw;
+}
+p img{
+    float: left;
+    padding-right: 15px;
+    width: 30%;
+    width: 30vw;
+}
+footer{
+    text-align: center;
+    font-size: 2em;
+    font-size: 2vw;
+    height: 100px;
+    background-color: rgba(49, 50, 39, 0.4);
+    border-top: 5px solid rgb(22, 22, 87)
+}
+footer h3{
+    margin-top: 25px;
+}
