@@ -6,8 +6,10 @@
         <title>Schuyler Ankele - Full-Stack Developer</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="https://fonts.googleapis.com/css?family=PT+Sans|PT+Sans+Narrow:700" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans|PT+Sans+Narrow:700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="assets/css/style.css">
         
     </head>
@@ -17,8 +19,17 @@
             <nav>
                 <ul class="links">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
                     <li><a href="portfolio.html">Portfolio</a></li>
+                    <li class="brand">
+                        <a class="" href="https://github.com/shoesCodeFor"><i class="fab fa-github fa-2x"></i></a>
+                    </li>
+                    <li class="brand">
+                        <a class="" href="#"><i class="fab fa-twitter fa-2x"></i></a>
+                    </li>
+                    <li class="brand">
+                        <a class="" href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+                    </li> 
                 </ul>
             </nav>
         </header>
@@ -27,15 +38,39 @@
                 <hr>
                 <section>
                     <form id="contact">
-                        <label for="firstName">
-                            First Name
-                        </label>
-                        <input id="firstName" type="text">
-                        <label for="lastName">
-                            Last Name
-                        </label>
-                        <input id="lastName" type="text">
+                        <div id="nameInputs">
+                            <div class="nameDiv">
+                                <label for="firstName">
+                                    First Name
+                                </label>
+                                <br>
+                                <input id="firstName" type="text">
+                            </div>
+                            <div class="nameDiv">
+                                <label for="lastName">
+                                    Last Name
+                                  </label>
+                                  <br>
+                                <input id="lastName" type="text">
+                            </div>
+                            
+                        </div>
+                        
                         <br>
+                        <div id="messageInput">
+                            <label for="message">Message:</label><br>
+                            <textarea name="message" id="message" rows="10"></textarea>
+                        </div>
+                        <div id="emailInput">
+                            <label for="email">
+                                Email Address
+                            </label>
+                            <input id="email" type="email">
+                        </div>
+                        <br>
+                        <button onclick="submit" class="submission">
+                            Submit
+                        </button>
                     </form>
                 </section>
         </div>
