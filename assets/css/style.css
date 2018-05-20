@@ -4,9 +4,29 @@
 *   University of Denver Bootcamp 2018
 **/
 
-/*  Global CSS Variables */
+/*  Global CSS Variables 
+Teal color (used for headings and backgrounds): #4aaaa5
+Regular font color (used for paragraphs and all text besides the headings): #777777
+Main header background color: #ffffff
+Main header border color: #cccccc
+Footer background color: #666666
+Main content background color: #ffffff
+Main content border color: #dddddd
+*/
 :root{
-    --lightBlue: rgb(208, 238, 240);
+    /* Spec colors from HW */
+    --teal: #4aaaa5;
+    --reg-font-color: #777777;
+    --main-header: #fff;
+    --main-header-border:#ccc;
+    --footer-background:#666;
+    --main-content-background: #fff;
+    --main-content-border:#ddd;
+    /* Spec fonts for body */
+    --heading-font: 'Georgia', Times, Times New Roman, serif;
+    --regular-font: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+
+    --light-blue: rgb(208, 238, 240);
     --bone:rgb(254, 250, 227);
     --deepBlue: rgba(43, 60, 60, 0.7);
     --shadow:rgba(239, 242, 208, 0.4);
@@ -19,49 +39,50 @@
 }
 
 
+
 body{
     /* background-image: url('../images/nighttime.jpg');
     background-attachment: fixed;*/
-    background-image: url('../images/bg-coffee.jpg');
-    background-size: 100vw;
-    background-position: cover, contain;
-    background-position-y:-200px; 
-    background-color:rgb(208, 238, 240);
+    background-color: var(--main-content-background);
+    background-image: url('../images/tweed-opaque.png');
     font-family: 'Ubuntu', sans-serif;
 }
-h1{
-    font-size: 30px;
-    font-size: 4vw;
-}
-header{
-    height: 22vh;
-    max-height: 90px;
-    background-color: var(--deepBlue);
-    box-shadow: 3px 0px 8px black;
-}
+
+
 .name{
     position: relative;
-    margin-left: 7.5%;
-    margin-left: 7.5vw;
-    top: 2vh;
+    margin-left: 5%;
+    margin-left: 5vw;
+    height: 75%;
+    max-height: 70px;
     width: 30%;
     width: 30vw;
     color: var(--lightBlue);
+    background-color: var(--teal);
     padding: 10px;
     text-align: center;
+    font-size: 20px;
+    font-size: 3.5vw;
+}
+.name h1{
+    padding-top: 3%;
 }
 .name:hover{
     
 }
 nav{
+    height: 22vh;
+    max-height: 90px;
+    background-color: var(--main-header);
+    box-shadow: 3px 0px 8px black;
 
 }
 nav .links{
     position: absolute;
     top:25px;
     top:2vh;
-    right: 10%;
-    right: 10vw;
+    right: 5%;
+    right:5vw;
 }
 nav .links li{
     display: inline;
@@ -76,7 +97,7 @@ nav .links li:hover{
     
 }
 .links li a{
-    color: aliceblue;
+    color: rgb(0, 0, 0);
 }
 .links li a:hover{
     color: rgb(189, 189, 252);
@@ -88,28 +109,31 @@ nav .links li:hover{
     position: relative;
     top:1.4vh;
 }
+header{
+    
+}
 p{
     position: relative;
+    text-align: left;
     width: 80%;
-    width: 60vw;
-    margin-left: 10%;
-    margin-left: 10vw;
+    margin-left: 7.5%;
     padding: 20px;
     font-size: 1.7vw;
 }
+.container{
+    width:100%;
+    text-align: center;
+}
 .main-content{
     position: relative;
+    text-align: center;
     margin-left: 7.5%;
-    margin-left: 7.5vw;
     width: 85%;
-    width: 85vw;
     background-color: rgba(255,255,255,0.6);
     padding-bottom: 100px;
     
 }
 .main-content h2{
-    width:30%;
-    width:30vw;
     text-align: left;
     font-weight: bold;
     font-size: 2em;
@@ -118,6 +142,7 @@ p{
     margin-top: 10px;
 }
 p img{
+    position: relative;
     float: left;
     padding-right: 15px;
     width: 30%;
@@ -127,12 +152,12 @@ footer{
     position: fixed;
     text-align: center;
     font-size: 2em;
-    font-size: 2vw;
+    font-size: 1.6vw;
     height: 80px;
     width: 100%;
     bottom: 0px;
-    background-color: rgba(209, 213, 165, 1);
-    border-top: 5px solid rgb(90, 90, 99)
+    background-color: var(--footer-background);
+    border-top: 5px solid var(--teal);
 }
 footer h3{
     margin-top: 25px;
@@ -149,7 +174,16 @@ footer h3{
     line-height: 1.2em;
 }
 #contact input{
-    width:90%;
+    width:50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+#contact label{
+    font-size: 2em;
 }
 #contact button{
     position: relative;
@@ -213,7 +247,7 @@ footer h3{
     background-color: rgba(0,0,0,0.1);
     border-radius: 5px;
     width: 200px;
-    height: 160px;
+    height: 200px;
     margin: auto;
     margin-top:30px;
     margin-bottom: 5%;
@@ -229,7 +263,7 @@ footer h3{
     font-weight: bold;
     font-size: 1.5rem;
     text-align: center;
-    background-color:rgba(0,0,0,0.2);
+    background-color:rgb(174, 174, 174);
   }
   .project-desc{
     text-align:center;
@@ -237,10 +271,26 @@ footer h3{
     height: 100% - 26px;
     opacity:0;
     transition: all 1s ease;
+    background-color: rgba(255,255,255,1);
   }
   .project-desc:hover{
-    opacity:.8;
+    opacity:.9;
   }
+  #busyBee{
+      background-image: url('../images/busyBee.jpg');
+      background-position-y: 40px;
+      background-repeat: no-repeat;
+  }
+  #akasa{
+    background-image: url('../images/akasa.jpg');
+    background-position-y: 60px;
+    background-repeat: no-repeat;
+}
+  #farmersMarket{
+    background-image: url('../images/farmersMarket.jpg');
+    background-position-y: 40px;
+    background-repeat: no-repeat;
+}
 
 /**
 * Animations
@@ -248,20 +298,63 @@ footer h3{
 *
 **/
 .active {
-    animation: pulse 3s infinite;
+    animation: pulse 5s infinite;
   }
   
   @keyframes pulse {
     0% { 
-        color: rgb(209, 231, 250);
+        color: rgb(0, 0, 0);
     }
     50% {  
-        color: rgb(125, 190, 247);
+        color: hsl(177, 59%, 36%);
       }
     75% {
-        color: rgb(236, 252, 178);
+        color: hsl(177, 41%, 34%);
     }
     100%{
-        color: rgb(209, 231, 250);
+        color: rgb(0, 0, 0);
     }
   }
+
+  /*  Responsive Content */
+@media only screen and (max-width: 600px) {
+    nav .links{
+        top:5%;
+    }
+    .fab{
+        display: none;
+    }
+
+}
+@media only screen and (max-height: 360px) {
+    nav{
+        height: 90px;
+    }
+}
+@media only screen and (min-height: 370px) {
+    .name{
+        height:76%;
+    }
+}
+@media only screen and (min-height: 380px) {
+    .name{
+        height:79%;
+    }
+}
+
+@media only screen and (min-width: 960px) {
+    body {
+        position: absolute;
+        width: 100%;
+    }
+    .container{
+        width: 100%;
+
+    }
+    .main-content{
+        left:50% !important;
+        margin-left: -480px !important;
+        width: 960px;
+    }
+    
+}
